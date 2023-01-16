@@ -114,12 +114,12 @@ width: 100px;
             <h4 class="card-title" style="text-align: center; font-weight: bold">{{$timer->name}}</h4>
             <h2 class="card-title" id="time{{$timer->id}}" style="text-align: center; font-weight: bold">{{$timer->time}}</h2>
             <button  type="button" onclick="countdown('{{$timer->time}}','{{$timer->id}}')" class="btn btn-dark">start</button>
-            <input hidden value="" id="timerInput{{$timer->id}}" name="timerInput">
+            <input hidden value="{{$timer->time}}" id="timerInput{{$timer->id}}" name="timerInput">
             <button type="submit" onclick="stop(document.getElementById('timerInput{{$timer->id}}').value)" class="btn btn-dark" id="stop">stop</button>
-            <button type="button" onclick="pause()" class="btn btn-dark" style="cursor:pointer" >
+            <button type="button" onclick="pause()" class="btn btn-dark" style="cursor:pointer"  >
                 <i class="text-md-left fa fa-pause" style="color:whitesmoke"></i>
             </button>
-            <button type="button" onclick="countdown(document.getElementById('timerInput{{$timer->id}}').value,{{$timer->id}})" class="btn btn-dark" style="cursor:pointer" >
+            <button type="button" onclick="countdown(document.getElementById('timerInput{{$timer->id}}').value,{{$timer->id}})" class="btn btn-dark" style="cursor:pointer;" >
                 <i class="text-md-left fa fa-play" style="color:whitesmoke"></i>
             </button>
         </div>
